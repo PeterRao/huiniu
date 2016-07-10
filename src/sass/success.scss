@@ -1,0 +1,32 @@
+@import './helpers/mixins';
+@import './helpers/functions';
+
+$BG: #282730;
+body, html {
+    background-color: $BG;
+}
+
+.btn {
+    padding: 1em 0;
+    text-align: center;
+    display: block;
+}
+
+.header-bg {
+    width: px2rem(750);
+    display: block;
+}
+
+.main {
+    margin-top: px2rem(280);
+    padding: 0 px2rem(40);
+    .btn-check {
+        color: #F7A636;
+        border: 1px solid #F7A636;
+        margin-bottom: px2rem(40);
+    }
+    .btn-download {
+        color: #63607B;
+        border: 1px solid #63607B;
+    }
+}

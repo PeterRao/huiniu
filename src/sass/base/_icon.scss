@@ -1,0 +1,37 @@
+@import '../helpers/mixins';
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    @include px2px(width, 40);
+    @include px2px(height, 40);
+}
+
+.icon-phone {
+    background: url("../img/ic_phone.png") no-repeat;
+    background-size: 100%;
+}
+
+.icon-code {
+    background: url("../img/ic_code.png") no-repeat;
+    background-size: 100%;
+}
+
+.icon-password {
+    background: url("../img/ic_password.png") no-repeat;
+    background-size: 100%;
+}
+
+.icon-check {
+    background: url("../img/ic_check.png") no-repeat;
+    background-size: 100%;
+}
+
+.icon-checked {
+    background: url("../img/ic_checked.png") no-repeat;
+    background-size: 100%;
+}
+.icon-logo {
+    background: url("../img/ic_logo.png") no-repeat;
+    background-size: 100%;
+}

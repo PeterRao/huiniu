@@ -1,0 +1,100 @@
+@import './helpers/mixins';
+@import './helpers/functions';
+
+$BG: #282730;
+body, html {
+    background-color: $BG;
+}
+
+.header-bg {
+    width: px2rem(750);
+    display: block;
+}
+
+.main {
+    padding: 0 px2rem(40);
+    .input-ctn {
+        padding: px2rem(88) 0 px2rem(128);
+    }
+    .input-group {
+        padding: px2rem(20) 0;
+        border-bottom: 1px solid #3B3946;
+        span {
+            vertical-align: middle;
+        }
+        .icon {
+            margin-right: px2rem(26);
+        }
+        input {
+            width: px2rem(590);
+            @include px2px(font-size, 32);
+            background-color: $BG;
+            vertical-align: middle;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border: none;
+            color: #fff;
+            &::-webkit-input-placeholder {
+                color: #54545B;
+            }
+            &:-moz-placeholder {
+                color: #54545B;
+            }
+            &::-moz-placeholder {
+                color: #54545B;
+            }
+            &:-ms-input-placeholder {
+                color: #54545B;
+            }
+        }
+        &.agreement {
+            border-bottom: none;
+            color: #fff;
+            a {
+                color: #7F7DFF;
+                text-decoration: underline;
+            }
+        }
+        &.input-code {
+            input {
+                width: px2rem(300);
+            }
+            .action {
+                float: right;
+                padding: .3em .5em;
+                margin-top: -.3em;
+                border-radius: px2rem(8);
+                &.send {
+                    color: #F7A636;
+                    border: 1px solid #F7A636;
+                }
+                &.wait {
+                    color: #979797;
+                    border: 1px solid #979797;
+                }
+            }
+        }
+    }
+    .btn-reg {
+        text-align: center;
+        color: #fff;
+        background-color: #7F7DFF;
+        padding: 1em 0;
+        border-radius: px2rem(8);
+        .icon, span {
+            vertical-align: middle;
+        }
+    }
+    .rule {
+        text-align: center;
+        margin-top: px2rem(54);
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+}

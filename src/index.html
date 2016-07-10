@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./js/lib/flexible.js"></script>
+    <title>慧牛理财</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="hide">
+        <p>微信分享描述</p>
+        <img src="" alt="微信分享图片">
+        <img src="" alt="微信分享图片">
+    </div>
+    <img class='header-bg' src="./img/bg-index.png" alt="慧牛理财">
+    <div class="main">
+        <div class="input-ctn fz-32">
+            <div class="input-group">
+                <i class="icon icon-phone"></i>
+                <input id='j-phone-input' type="text" placeholder="请您输入手机号码">
+            </div>
+            <div class="input-group input-code">
+                <i class="icon icon-code"></i>
+                <input id="j-code-input" type="text" placeholder="请输入收到的验证码">
+                <span id="j-code-send" class="action send">点击发送</span>
+                <span id="j-code-wait" class="action wait hide">
+                    <span id="j-code-timer">59</span>
+                    <span>秒后重新发送</span>
+                </span>
+            </div>
+            <div class="input-group">
+                <i class="icon icon-password"></i>
+                <input id='j-password-input' type="password" placeholder="登录密码（不少于6位，含字母+数字）">
+            </div>
+            <div id='j-agreement' class="input-group agreement">
+                <i class="icon icon-check"></i>
+                <span class="fz-28">我已同意<a href="#">《慧牛理财用户协议》</a></span>
+            </div>
+        </div>
+
+        <div id='j-reg' class="btn btn-reg fz-36">
+            <i class="icon icon-logo"></i>
+            <span>立即注册慧牛账户！</span>
+        </div>
+        <div class="rule fz-32">
+            <a href="#">点击查看活动规则</a>
+        </div>
+    </div>
+    <script src="./js/lib/zepto.js"></script>
+    <script src="./js/lib/md5.js"></script>
+    <script src="./js/lib/util.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

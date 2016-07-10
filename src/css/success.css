@@ -1,0 +1,22 @@
+body, html {
+  background-color: #282730; }
+
+.btn {
+  padding: 1em 0;
+  text-align: center;
+  display: block; }
+
+.header-bg {
+  width: 10rem;
+  display: block; }
+
+.main {
+  margin-top: 3.73333rem;
+  padding: 0 0.53333rem; }
+  .main .btn-check {
+    color: #F7A636;
+    border: 1px solid #F7A636;
+    margin-bottom: 0.53333rem; }
+  .main .btn-download {
+    color: #63607B;
+    border: 1px solid #63607B; }

@@ -1,0 +1,78 @@
+body, html {
+  background-color: #282730; }
+
+.header-bg {
+  width: 10rem;
+  display: block; }
+
+.main {
+  padding: 0 0.53333rem; }
+  .main .input-ctn {
+    padding: 1.17333rem 0 1.70667rem; }
+  .main .input-group {
+    padding: 0.26667rem 0;
+    border-bottom: 1px solid #3B3946; }
+    .main .input-group span {
+      vertical-align: middle; }
+    .main .input-group .icon {
+      margin-right: 0.34667rem; }
+    .main .input-group input {
+      width: 7.86667rem;
+      font-size: 16px;
+      background-color: #282730;
+      vertical-align: middle;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      border-radius: 0;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      border: none;
+      color: #fff; }
+      [data-dpr="2"] .main .input-group input {
+        font-size: 32px; }
+      [data-dpr="3"] .main .input-group input {
+        font-size: 48px; }
+      [data-dpr="4"] .main .input-group input {
+        font-size: 64px; }
+      .main .input-group input::-webkit-input-placeholder {
+        color: #54545B; }
+      .main .input-group input:-moz-placeholder {
+        color: #54545B; }
+      .main .input-group input::-moz-placeholder {
+        color: #54545B; }
+      .main .input-group input:-ms-input-placeholder {
+        color: #54545B; }
+    .main .input-group.agreement {
+      border-bottom: none;
+      color: #fff; }
+      .main .input-group.agreement a {
+        color: #7F7DFF;
+        text-decoration: underline; }
+    .main .input-group.input-code input {
+      width: 4rem; }
+    .main .input-group.input-code .action {
+      float: right;
+      padding: .3em .5em;
+      margin-top: -.3em;
+      border-radius: 0.10667rem; }
+      .main .input-group.input-code .action.send {
+        color: #F7A636;
+        border: 1px solid #F7A636; }
+      .main .input-group.input-code .action.wait {
+        color: #979797;
+        border: 1px solid #979797; }
+  .main .btn-reg {
+    text-align: center;
+    color: #fff;
+    background-color: #7F7DFF;
+    padding: 1em 0;
+    border-radius: 0.10667rem; }
+    .main .btn-reg .icon, .main .btn-reg span {
+      vertical-align: middle; }
+  .main .rule {
+    text-align: center;
+    margin-top: 0.72rem; }
+    .main .rule a {
+      color: #fff;
+      text-decoration: underline; }

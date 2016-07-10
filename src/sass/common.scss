@@ -1,0 +1,30 @@
+@import './base/base';
+@import './base/icon';
+@import "./base/font-size";
+
+.content {
+    @media (min-width: 750px) {
+        max-width: px2rem(750);
+        margin: 0 auto;
+    }
+}
+
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.hide {
+    display: none !important;
+}
