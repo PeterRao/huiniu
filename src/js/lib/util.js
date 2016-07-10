@@ -1,4 +1,4 @@
-(function() {
+;(function() {
     function search(str) {
         if (!str) {
             return {};
@@ -28,5 +28,5 @@
         }
     };
     window.util = util;
-})(window);
+})();
 

@@ -4,6 +4,8 @@
     var site = util.urlParser().search.id;
     // 尝试次数
     var retry = 0;
+    // 防止重复提交
+    var codeSend = false;
     // var apiServer = 'http://dev.hnlidev.ncfgroup.com/api';
     // 反向代理
     var apiServer = '/api';
@@ -19,6 +21,7 @@
             }
         },
         setCodeTimer: function (second) {
+            console.log('test');
             $codeTimer.text(second);
             $codeSend.addClass('hide');
             $codeWait.removeClass('hide');
@@ -62,7 +65,7 @@
             });
         },
         verifyPassword: function (password) {
-            var reg = /[a-zA-Z0-9]+{6,}$/;
+            var reg = /[a-zA-Z0-9]{6,}$/ig;
             return reg.test(password);
         }
     };
@@ -99,8 +102,13 @@
                 code: code
             };
             // console.log(phone, code, password, md5(password));
-            _data.register(params, function() {
-
+            _data.register(params, function(data) {
+                if(data.code == '00000') {
+                    // 注册成功
+                    location.href = './success.html';
+                } else {
+                    alert(data.msg);
+                }
             });
         },
         handleAgreement: function () {
@@ -108,6 +116,10 @@
             _view.agreementCheck(!checked);
         },
         handleCodeSend: function () {
+            if (codeSend) {
+                alert('正在发送验证码，请稍等');
+                return false;
+            }
             var phone = $phoneInput.val();
             if (!phone) {
                 alert('请输入正确的手机号码');
@@ -117,11 +129,18 @@
                 retry: retry,
                 mob: phone
             };
-            _data.sendVerifyCode(params, function (code) {
-                if (code.status == '00000') {
+            retry++;
+            codeSend = true;
+            _data.sendVerifyCode(params, function (data) {
+                codeSend = false;
+                if (data.status == "00000") {
                     // 验证成功
                     _view.setCodeTimer(59);
+                } else {
+                    alert(data.msg);
                 }
+            }, function() {
+                codeSend = false;
             });
         }
     };
